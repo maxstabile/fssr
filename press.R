@@ -6,7 +6,7 @@ library(ggthemes)
 library(xlsx)
 library(dplyr) 
 
-basecompleta <- read.xlsx("dados imprensa.xlsx", 1, header=TRUE)
+basecompleta <- read.xlsx("data/dados imprensa.xlsx", 1, header=TRUE)
 
 
 df <- basecompleta[c(3,4)]

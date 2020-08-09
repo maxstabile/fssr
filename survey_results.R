@@ -9,7 +9,7 @@ library(ggrepel)
 
 
 #carregando a base de dados em formato SPSS
-FSSR1 <- read_sav("FSSR1.sav")
+FSSR1 <- read_sav("data/FSSR1.sav")
 
 FSSR1$ONDA <- as.factor(FSSR1$ONDA)
 FSSR1$tratamento <- as.factor(FSSR1$tratamento)
