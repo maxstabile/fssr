@@ -4,13 +4,18 @@ library(gridExtra) # for arranging plots
 library(lubridate)
 library(ggthemes)
 library(xlsx)
+library(dplyr) 
 
 basecompleta <- read.xlsx("dados imprensa.xlsx", 1, header=TRUE)
-dfteste <- dfteste[c(3,4)]
+
+
+df <- basecompleta[c(3,4)]
 colnames(df)[2] <- "wave"
+str(df$wave)
 
+df$wave <- as.integer(df$wave) 
+df$wave <- df$wave-1 
 
-library("dplyr") 
 
 #criando a tabela de frequência por data
 df2 <- df %>% 
